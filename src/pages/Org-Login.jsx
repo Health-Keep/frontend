@@ -1,7 +1,7 @@
 const OrgLogin = () => {
   return (
     <div>
-      <div></div>
+      <div>Organization</div>
     </div>
   );
 };
