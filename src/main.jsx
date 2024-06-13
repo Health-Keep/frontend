@@ -5,11 +5,14 @@ import "./index.css";
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
 import HomePage from "./pages/HomePage.jsx";
 import Login from "./pages/Login.jsx";
+import OrgLogin from "./pages/Org-Login.jsx";
 
 const router = createBrowserRouter([
   { path: "/", element: <App /> },
   { path: "/home", element: <HomePage /> },
   { path: "/login", element: <Login /> },
+  { path: "/org-login", element: <OrgLogin /> },
+  { path: "/user-login", element: <Login /> },
 ]);
 
 ReactDOM.createRoot(document.getElementById("root")).render(
