@@ -1,5 +1,9 @@
 const OrgLogin = () => {
-  return <div>Org-Login</div>;
+  return (
+    <div>
+      <div></div>
+    </div>
+  );
 };
 
 export default OrgLogin;
