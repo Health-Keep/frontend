@@ -23,7 +23,7 @@ const OrgLogin = () => {
 
   const onSubmit = async (event) => {
     event.preventDefault();
-    navigate("/org-verify");
+    navigate("/dashboard");
   };
 
   return (
