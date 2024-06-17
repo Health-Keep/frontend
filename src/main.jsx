@@ -12,6 +12,7 @@ import VerifyEmail from "./pages/organization/VerifyEmail.jsx";
 import VerifySuccess from "./pages/organization/VerifySuccess.jsx";
 import ErrorPage from "./pages/ErrorPage.jsx";
 import DashBoard from "./pages/organization/DashBoard.jsx";
+import PatientSearchCard from "./pages/organization/PatientSearchCard.jsx";
 
 const router = createBrowserRouter([
   { path: "/", element: <App />, errorElement: <ErrorPage /> },
@@ -23,6 +24,7 @@ const router = createBrowserRouter([
   { path: "/org-verify", element: <VerifyEmail /> },
   { path: "/success", element: <VerifySuccess /> },
   { path: "/dashboard", element: <DashBoard /> },
+  { path: "/searchcard", element: <PatientSearchCard /> },
 ]);
 
 ReactDOM.createRoot(document.getElementById("root")).render(
