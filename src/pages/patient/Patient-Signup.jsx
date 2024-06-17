@@ -37,7 +37,7 @@ const PatientSignup = () => {
               <p class="mb-[5px] text-[#1F1F1F] text-sm font-normal">Email</p>
               <input
                 type="email"
-                class="mb-[10px] text-[#A5A5A5] text-[0.8em] shadow-2xl shadow- w-[355px] h-[35px] p-[10px] rounded border"
+                class="mb-[10px] text-[#A5A5A5] text-[0.8em] shadow-2xl w-[355px] h-[35px] p-[10px] rounded border"
                 placeholder="Email"
                 required
               />

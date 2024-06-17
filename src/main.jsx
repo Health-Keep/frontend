@@ -8,6 +8,7 @@ import Login from "./pages/Login.jsx";
 import OrgLogin from "./pages/Org-Login.jsx";
 import PatientLogin from "./pages/patient/Patient-Login.jsx";
 import PatientSignup from "./pages/patient/Patient-Signup.jsx";
+import ForgotPassword from "./pages/patient/Forgot-Password.jsx";
 
 const router = createBrowserRouter([
   { path: "/", element: <App /> },
@@ -15,7 +16,8 @@ const router = createBrowserRouter([
   { path: "/login", element: <Login /> },
   { path: "/org-login", element: <OrgLogin /> },
   { path: "/patient-login", element: <PatientLogin /> },
-  {path: "/patient-signup", element: <PatientSignup />}
+  {path: "/patient-signup", element: <PatientSignup />},
+  {path: "/forgot-password", element: <ForgotPassword />}
 ]);
 
 ReactDOM.createRoot(document.getElementById("root")).render(
