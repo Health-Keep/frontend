@@ -39,6 +39,7 @@ const PatientSignup = () => {
                 type="email"
                 class="mb-[10px] text-[#A5A5A5] text-[0.8em] shadow-2xl shadow- w-[355px] h-[35px] p-[10px] rounded border"
                 placeholder="Email"
+                required
               />
             </div>
 
@@ -48,6 +49,7 @@ const PatientSignup = () => {
               </p>
               <input
                 type="date"
+                required
                 class="mb-[10px] text-[#A5A5A5] text-[0.7em] shadow-2xl shadow- w-[355px] h-[35px] p-[10px] rounded border"
               />
             </div>

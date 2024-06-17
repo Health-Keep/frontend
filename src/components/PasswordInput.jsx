@@ -47,7 +47,7 @@ const PasswordInput = () => {
       <button
         type="button"
         onClick={togglePasswordVisibility}
-        className="absolute inset-y-0 right-0 pr-3 pb-[12px] flex items-center text-[0.8em] text-[#A5A5A5] leading-5"
+        className="absolute inset-y-0 right-0 pr-3 pb-[35px] flex items-center text-[0.8em] text-[#A5A5A5] "
       >
         {showPassword ? <FaRegEye /> : <FaEyeSlash />}
       </button>
