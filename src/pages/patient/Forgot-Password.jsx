@@ -14,8 +14,8 @@ const ForgotPassword = () => {
               <MdOutlineEmail className="w-5 h-5" />
               <input
                 type="email"
-                required
                 className="w-full border-none focus:outline-none"
+                required
               />
             </div>
 
