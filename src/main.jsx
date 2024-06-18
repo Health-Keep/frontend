@@ -10,6 +10,8 @@ import PatientLogin from "./pages/patient/Patient-Login.jsx";
 import PatientSignup from "./pages/patient/Patient-Signup.jsx";
 import ForgotPassword from "./pages/patient/Forgot-Password.jsx";
 import Email from "./pages/patient/Email.jsx";
+import ResetPassword from "./pages/patient/Reset-Password.jsx";
+import PasswordChanged from "./pages/patient/PasswordChanged.jsx";
 
 const router = createBrowserRouter([
   { path: "/", element: <App /> },
@@ -20,6 +22,8 @@ const router = createBrowserRouter([
   {path: "/patient-signup", element: <PatientSignup />},
   {path: "/forgot-password", element: <ForgotPassword />},
   {path: "/email", element: <Email />},
+  {path: "/reset-password", element: <ResetPassword />},
+  {path: "/passwordChanged", element: <PasswordChanged />},
 ]);
 
 ReactDOM.createRoot(document.getElementById("root")).render(
