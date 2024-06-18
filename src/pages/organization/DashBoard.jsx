@@ -6,7 +6,7 @@ import users from "../../assets/users.png";
 import shield from "../../assets/shield.png";
 import bell from "../../assets/bell.png";
 import icon from "../../assets/icon.png";
-import role from "../../assets/role.png";
+// import role from "../../assets/role.png";
 import cal from "../../assets/lead-icon.png";
 import Table from "../../components/Table";
 
@@ -64,17 +64,18 @@ const DashBoard = () => {
               <img src={users} alt="Patients" />
               <p className="text-[14px] font-[500] leading-[18px]">Patients</p>
             </button>
-            <button className="flex flex-row items-center justify-start gap-3">
+            {/* <button className="flex flex-row items-center justify-start gap-3">
               <img src={role} alt="Roles" />
               <p className="text-[14px] font-[500] leading-[18px]">Roles</p>
-            </button>
+            </button> */}
           </div>
         </div>
       </div>
 
+      {/* Main Dashboard starts here */}
       <div className="px-[24px]">
         <input
-          className="w-[265px] h-[40px] mt-[15px] mb-[38px] p-[15px] text-[14px] font-[400] bg-[#f5f5f5] rounded-[8px] border-[2px] border-[#a5a5a5] outline-[#f5f5f5] "
+          className="w-[265px] h-[40px] mt-[15px] mb-[38px] p-[15px] text-[14px] font-[400] bg-[#f5f5f5] rounded-[8px] border-[1px] border-[#a5a5a5] outline-[#f5f5f5] "
           type="search"
           name="search"
           id="search"
