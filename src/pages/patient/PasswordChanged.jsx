@@ -22,11 +22,11 @@ const PasswordChanged = () => {
                 </p>
                 </div>
             </div>
-            <div className="w-full h-12 bg-[#03A9F4] flex items-center justify-center rounded">
+            <div className="w-[392px] h-[56px] bg-[#03A9F4] flex items-center justify-center rounded">
                 <Link to="/HomePage">
                 <input
                     type="submit"
-                    className="text-white text-base font-semibold"
+                    className="text-white text-base font-bold "
                     value="Go back to homepage"
                 />
                 </Link>
