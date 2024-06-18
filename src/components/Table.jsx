@@ -1,5 +1,5 @@
 import React from "react";
-import dot from "../assets/dots.png";
+// import dot from "../assets/dots.png";
 import {
   TableContainer,
   Table as MuiTable,
@@ -9,39 +9,40 @@ import {
   TableBody,
   TablePagination,
   Paper,
-  Chip,
+  // Chip,
 } from "@mui/material";
+import { Link } from "react-router-dom";
 
-const createData = (id, caption, name, treatment) => {
-  return { id, caption, name, treatment };
+const createData = (id, name, date) => {
+  return { id, name, date };
 };
 
 const rows = [
-  createData("#2001", "Caption", "Dalpo Aina", "Completed"),
-  createData("#2002", "Caption", "Dalpo Aina", "In progress"),
-  createData("#2003", "Caption", "Dalpo Aina", "Completed"),
-  createData("#2004", "Caption", "Dalpo Aina", "Completed"),
-  createData("#2005", "Caption", "Dalpo Aina", "Completed"),
-  createData("#2006", "Caption", "Dalpo Aina", "In progress"),
-  createData("#2007", "Caption", "Dalpo Aina", "In progress"),
-  createData("#2008", "Caption", "Dalpo Aina", "Completed"),
-  createData("#2009", "Caption", "Dalpo Aina", "Completed"),
-  createData("#2010", "Caption", "Dalpo Aina", "Completed"),
-  createData("#2011", "Caption", "Dalpo Aina", "Completed"),
-  createData("#2012", "Caption", "Dalpo Aina", "Completed"),
-  createData("#2013", "Caption", "Chi Baby", "Completed"),
+  createData("#2001", "Dalpo Aina", "12/06/24"),
+  createData("#2002", "Dalpo Aina", "12/06/24"),
+  createData("#2003", "Dalpo Aina", "12/06/24"),
+  createData("#2004", "Dalpo Aina", "12/06/24"),
+  createData("#2005", "Dalpo Aina", "12/06/24"),
+  createData("#2006", "Dalpo Aina", "12/06/24"),
+  createData("#2007", "Dalpo Aina", "12/06/24"),
+  createData("#2008", "Dalpo Aina", "12/06/24"),
+  createData("#2009", "Dalpo Aina", "12/06/24"),
+  createData("#2010", "Dalpo Aina", "12/06/24"),
+  createData("#2011", "Dalpo Aina", "12/06/24"),
+  createData("#2012", "Dalpo Aina", "12/06/24"),
+  createData("#2013", "Chi Baby", "12/06/24"),
 ];
 
-const statusColor = (status) => {
-  switch (status) {
-    case "Completed":
-      return "success";
-    case "In progress":
-      return "warning";
-    default:
-      return "default";
-  }
-};
+// const statusColor = (status) => {
+//   switch (status) {
+//     case "Completed":
+//       return "success";
+//     case "In progress":
+//       return "warning";
+//     default:
+//       return "default";
+//   }
+// };
 
 const Table = () => {
   const [page, setPage] = React.useState(0);
@@ -62,11 +63,9 @@ const Table = () => {
         <MuiTable>
           <TableHead>
             <TableRow>
-              <TableCell>ID</TableCell>
-              <TableCell>Caption</TableCell>
+              <TableCell>ID Number</TableCell>
               <TableCell>Name</TableCell>
-              <TableCell>Treatment</TableCell>
-              <TableCell>Options</TableCell>
+              <TableCell>Date of reg.</TableCell>
             </TableRow>
           </TableHead>
           <TableBody>
@@ -74,20 +73,19 @@ const Table = () => {
               .slice(page * rowsPerPage, page * rowsPerPage + rowsPerPage)
               .map((row) => (
                 <TableRow key={row.id}>
-                  <TableCell>{row.id}</TableCell>
-                  <TableCell>{row.caption}</TableCell>
-                  <TableCell>{row.name}</TableCell>
                   <TableCell>
+                    <Link to="/searchcard">{row.id}</Link>
+                  </TableCell>
+                  <TableCell>
+                    <Link to="/searchcard">{row.name}</Link>
+                  </TableCell>
+                  {/* <TableCell>
                     <Chip
                       label={row.treatment}
                       color={statusColor(row.treatment)}
                     />
-                  </TableCell>
-                  <TableCell>
-                    <button>
-                      <img src={dot} alt="menu" />
-                    </button>
-                  </TableCell>
+                  </TableCell> */}
+                  <TableCell>{row.date}</TableCell>
                 </TableRow>
               ))}
           </TableBody>
