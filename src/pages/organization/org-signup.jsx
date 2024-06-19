@@ -7,6 +7,7 @@ import { Link, useNavigate } from "react-router-dom";
 import PasswordStrengthMeter from "../../components/PasswordStrengthMeter";
 import { useAuth } from "../../context/AuthContext";
 import axios from "axios";
+import Loader from "../../components/Loader";
 
 const OrgSignup = () => {
   const { email, setEmail } = useAuth();
@@ -15,6 +16,7 @@ const OrgSignup = () => {
   const [password, setPassword] = useState("");
   const [showPassword, setShowPassword] = useState(false);
   const [errors, setErrors] = useState({});
+  const [loading, setLoading] = useState(false);
   const navigate = useNavigate();
 
   const handleTogglePassword = () => {
@@ -52,6 +54,7 @@ const OrgSignup = () => {
     setErrors(validationError);
 
     if (Object.keys(validationError).length === 0) {
+      setLoading(true);
       try {
         const response = await axios.post(
           "https://backend-vsie.onrender.com/api/org/signup",
@@ -63,6 +66,7 @@ const OrgSignup = () => {
           }
           // response.data.user.name
         );
+        setLoading(false);
         console.log("Signup Successful:", response.data);
         navigate("/org-verify");
       } catch (error) {
@@ -168,6 +172,8 @@ const OrgSignup = () => {
             </Link>
           </span>
         </form>
+
+        {loading && <Loader />}
       </div>
       <div className="flex flex-col items-center justify-center w-[50%] h-full">
         <img className="w-[100%] h-[100%]" src={doc} alt="doctor" />

@@ -2,6 +2,7 @@ import envelop from "../../assets/envelope.png";
 import circle from "../../assets/circle.png";
 import logo from "../../assets/logo.png";
 import { useAuth } from "../../context/AuthContext";
+import { Link } from "react-router-dom";
 
 const VerifyEmail = () => {
   const { email } = useAuth();
@@ -40,9 +41,11 @@ const VerifyEmail = () => {
           <p className="text-[16px] font-[400]">
             Check your spam folder or click below
           </p>
-          <button className="w-[150px] h-[50px] px-[18px] py-[10px] text-[16px] font-[600] text-[#03A9F4] bg-[#d3e2e9] border-2 border-[#03A9F4] rounded-[8px] drop-shadow-xl">
-            Resend email
-          </button>
+          <Link to="/dashboard">
+            <button className="w-[150px] h-[50px] px-[18px] py-[10px] text-[16px] font-[600] text-[#03A9F4] bg-[#d3e2e9] border-2 border-[#03A9F4] rounded-[8px] drop-shadow-xl">
+              Resend email
+            </button>
+          </Link>
         </div>
       </div>
     </div>
