@@ -4,7 +4,7 @@ import logo from "../../assets/logo.png";
 import info from "../../assets/info.png";
 import { useAuth } from "../../context/AuthContext";
 
-const VerifyEmail = () => {
+const EmailVerification = () => {
   const { email } = useAuth();
   return (
     <div className="w-full h-full ">
@@ -71,4 +71,4 @@ const VerifyEmail = () => {
   );
 };
 
-export default VerifyEmail;
+export default EmailVerification;

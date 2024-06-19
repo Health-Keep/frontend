@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import { useAuth } from "../../context/AuthContext";
 
-const VerifySuccess = () => {
+const EmailSuccessful = () => {
   const { email } = useAuth();
   return (
     <div className="flex items-center justify-center w-[100%] h-screen">
@@ -23,4 +23,4 @@ const VerifySuccess = () => {
   );
 };
 
-export default VerifySuccess;
+export default EmailSuccessful;
