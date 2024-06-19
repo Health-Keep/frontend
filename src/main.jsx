@@ -5,32 +5,34 @@ import "./index.css";
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
 import HomePage from "./pages/HomePage.jsx";
 import Login from "./pages/Login.jsx";
-import OrgLogin from "./pages/Org-Login.jsx";
-import PatientLogin from "./pages/patient/Patient-Login.jsx";
-import PatientSignup from "./pages/patient/Patient-Signup.jsx";
-import ForgotPassword from "./pages/patient/Forgot-Password.jsx";
-import Email from "./pages/patient/Email.jsx";
-import ResetPassword from "./pages/patient/Reset-Password.jsx";
-import PasswordChanged from "./pages/patient/PasswordChanged.jsx";
-import VerifyEmail from "./pages/patient/Verify-Email.jsx";
+import OrgLogin from "./pages/organization/Org-Login.jsx";
+import OrgSignup from "./pages/organization/org-signup.jsx";
+import { AuthProvider } from "./context/AuthContext.jsx";
+import VerifyEmail from "./pages/organization/VerifyEmail.jsx";
+import VerifySuccess from "./pages/organization/VerifySuccess.jsx";
+import ErrorPage from "./pages/ErrorPage.jsx";
+import DashBoard from "./pages/organization/DashBoard.jsx";
+import PatientSearchCard from "./pages/organization/PatientSearchCard.jsx";
+import MedHistory from "./pages/organization/MedHistory.jsx";
 
 const router = createBrowserRouter([
-  { path: "/", element: <App /> },
+  { path: "/", element: <App />, errorElement: <ErrorPage /> },
   { path: "/home", element: <HomePage /> },
   { path: "/login", element: <Login /> },
   { path: "/org-login", element: <OrgLogin /> },
-  { path: "/patient-login", element: <PatientLogin /> },
-  {path: "/patient-signup", element: <PatientSignup />},
-  {path: "/forgot-password", element: <ForgotPassword />},
-  {path: "/email", element: <Email />},
-  {path: "/reset-password", element: <ResetPassword />},
-  {path: "/passwordChanged", element: <PasswordChanged />},
-  {path: "/verify-emaail", element: <VerifyEmail />},
-
+  { path: "/user-login", element: <Login /> },
+  { path: "/org-signup", element: <OrgSignup /> },
+  { path: "/org-verify", element: <VerifyEmail /> },
+  { path: "/success", element: <VerifySuccess /> },
+  { path: "/dashboard", element: <DashBoard /> },
+  { path: "/searchcard", element: <PatientSearchCard /> },
+  { path: "/medhistory", element: <MedHistory /> },
 ]);
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
-    <RouterProvider router={router} />
+    <AuthProvider>
+      <RouterProvider router={router} />
+    </AuthProvider>
   </React.StrictMode>
 );
