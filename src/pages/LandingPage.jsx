@@ -35,8 +35,8 @@ const LandingPage = () => {
         </Link>
       </nav>
 
-      <div>
-        <div className="w-[464px] h-[330px] flex flex-col gap-[16px]">
+      <div className="flex flex-row items-center justify-between gap-1 w-full mt-[50px] relative">
+        <div className="w-[464px] h-[330px] flex flex-col gap-[30px]">
           <div>
             <h1 className="text-[48px] font-[700]">
               Ditch the Paper work Embrace the future of healthcare
@@ -46,29 +46,31 @@ const LandingPage = () => {
               Records Anytime, Anywhere.
             </p>
           </div>
-          <div>
+          <div className="flex gap-[24px]">
             <Link to="/org-signup">
-              <button className="h-[52px] w-[120px] text-[16px] font-[600] py-[7px] px-[12px] bg-[#03A9F4] rounded-[8px]">
+              <button className="h-[52px] w-[180px] text-[16px] font-[600] py-[7px] px-[12px] bg-[#03A9F4] rounded-[8px]">
                 Sign up as a hospital
               </button>
             </Link>
             <Link to="/login">
-              <button className="h-[52px] w-[120px] text-[16px] font-[600] py-[7px] px-[12px] bg-[#03A9F4] rounded-[8px]">
+              <button className="h-[52px] w-[180px] text-[16px] font-[600] py-[7px] px-[12px] border border-[black] rounded-[8px]">
                 Sign up as a patient
               </button>
             </Link>
           </div>
         </div>
 
-        <div className="flex gap-5">
-          <span>
+        <div className="flex items-center justify-around gap-5 w-[50%]  relative top-[40px]">
+          <span className="w-400px] h-[320px] overflow-hidden bg-gray-200 rounded-[100px] ">
             <img src={nurse} alt="" />
           </span>
-          <span>
+          <span className="w-400px] h-[460px] overflow-hidden bg-orange-400 rounded-[200px] relative right-[20px]">
             <img src={nurse1} alt="" />
           </span>
         </div>
       </div>
+
+      <div></div>
     </div>
   );
 };
