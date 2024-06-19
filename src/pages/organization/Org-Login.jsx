@@ -5,9 +5,11 @@ import doc from "../../assets/doc.png";
 import logo from "../../assets/logo.png";
 import { Link, useNavigate } from "react-router-dom";
 import axios from "axios";
+import Loader from "../../components/Loader";
 
 const OrgLogin = () => {
   const [showPassword, setShowPassword] = useState(false);
+  const [loading, setLoading] = useState(false);
   const navigate = useNavigate();
 
   const [email, setEmail] = useState("");
@@ -25,6 +27,7 @@ const OrgLogin = () => {
   const onSubmit = async (event) => {
     event.preventDefault();
 
+    setLoading(true);
     try {
       const response = await axios.post(
         "https://backend-vsie.onrender.com/api/org/login",
@@ -34,6 +37,7 @@ const OrgLogin = () => {
           password: password,
         }
       );
+      setLoading(false);
       console.log("Login Successful:", response.data);
       navigate("/dashboard");
     } catch (error) {
@@ -121,6 +125,8 @@ const OrgLogin = () => {
             </Link>
           </span>
         </form>
+
+        {loading && <Loader />}
       </div>
       <div className="flex flex-col items-center justify-center w-[50%] h-full">
         <img className="w-[100%] h-[100%]" src={doc} alt="doctor" />
