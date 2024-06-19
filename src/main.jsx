@@ -15,6 +15,7 @@ import DashBoard from "./pages/organization/DashBoard.jsx";
 import PatientSearchCard from "./pages/organization/PatientSearchCard.jsx";
 import MedHistory from "./pages/organization/MedHistory.jsx";
 import RequestAccess from "./pages/organization/RequestAccess.jsx";
+import MedicalRecordCard from "./pages/organization/MedicalRecordCard.jsx";
 import PatientSignup from "./pages/patient/Patient-Signup.jsx";
 import ResetPassword from "./pages/patient/Reset-Password.jsx";
 import ForgotPassword from "./pages/patient/Forgot-Password.jsx";
@@ -34,6 +35,7 @@ const router = createBrowserRouter([
   { path: "/org-signup", element: <OrgSignup /> },
   { path: "/org-verify", element: <VerifyEmail /> },
   { path: "/success", element: <VerifySuccess /> },
+  { path: "/recordcard", element: <MedicalRecordCard /> },
   { path: "/dashboard", element: <DashBoard /> },
   { path: "/searchcard", element: <PatientSearchCard /> },
   { path: "/requestaccess", element: <RequestAccess /> },
