@@ -12,6 +12,7 @@ import ForgotPassword from "./pages/patient/Forgot-Password.jsx";
 import Email from "./pages/patient/Email.jsx";
 import ResetPassword from "./pages/patient/Reset-Password.jsx";
 import PasswordChanged from "./pages/patient/PasswordChanged.jsx";
+import VerifyEmail from "./pages/patient/Verify-Email.jsx";
 
 const router = createBrowserRouter([
   { path: "/", element: <App /> },
@@ -24,6 +25,8 @@ const router = createBrowserRouter([
   {path: "/email", element: <Email />},
   {path: "/reset-password", element: <ResetPassword />},
   {path: "/passwordChanged", element: <PasswordChanged />},
+  {path: "/verify-emaail", element: <VerifyEmail />},
+
 ]);
 
 ReactDOM.createRoot(document.getElementById("root")).render(
