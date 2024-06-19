@@ -23,9 +23,9 @@ const Login = () => {
                 <img src={house} alt="House" />
               </span>
             </div>
-          </Link>
+          </Link> 
 
-          <Link to="/user-login">
+          <Link to="/patient-login">
             <div className="flex flex-col items-center justify-center gap-3 w-[140px] h-[150px] border-2 border-solid border-[#FFC0B3] bg-[#FFC0B3] rounded-[8px] cursor-pointer">
               <h2 className="text-[18px] font-[500]">Patient</h2>
               <span className="flex flex-row items-center justify-center h-[70px] w-[70px] border-2 border-black rounded-full ">
