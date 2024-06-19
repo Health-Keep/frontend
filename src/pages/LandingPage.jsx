@@ -52,7 +52,7 @@ const LandingPage = () => {
                 Sign up as a hospital
               </button>
             </Link>
-            <Link to="/login">
+            <Link to="/patient-signup">
               <button className="h-[52px] w-[180px] text-[16px] font-[600] py-[7px] px-[12px] border border-[black] rounded-[8px]">
                 Sign up as a patient
               </button>
