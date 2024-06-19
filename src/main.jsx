@@ -14,6 +14,16 @@ import ErrorPage from "./pages/ErrorPage.jsx";
 import DashBoard from "./pages/organization/DashBoard.jsx";
 import PatientSearchCard from "./pages/organization/PatientSearchCard.jsx";
 import MedHistory from "./pages/organization/MedHistory.jsx";
+import VerifyEmail from "./pages/patient/Verify-Email.jsx";
+import VerifySuccess from "./pages/patient/Verify-Success.jsx";
+import PatientSignup from "./pages/patient/Patient-Signup.jsx";
+import ResetPassword from "./pages/patient/Reset-Password.jsx";
+import ForgotPassword from "./pages/patient/Forgot-Password.jsx";
+import PatientLogin from "./pages/patient/Patient-Login.jsx";
+import Email from "./pages/patient/Email.jsx";
+import PasswordChanged from "./pages/patient/PasswordChanged.jsx";
+
+
 
 const router = createBrowserRouter([
   { path: "/", element: <App />, errorElement: <ErrorPage /> },
@@ -27,6 +37,16 @@ const router = createBrowserRouter([
   { path: "/dashboard", element: <DashBoard /> },
   { path: "/searchcard", element: <PatientSearchCard /> },
   { path: "/medhistory", element: <MedHistory /> },
+  {path: "/verify-success", element: <VerifySucess />},
+  {path: "/verify-email", element: <VerifyEmail />},
+  {path: "/patient-signup", element: <PatientSignup />},
+  {path: "/forgot-password", element: <ForgotPassword />},
+  {path: "/patient-login", element: <PatientLogin />},
+  {path: "/Email", element: <Email />},
+  {path: "/reset-password", element: <ResetPassword/>},
+  {path: "/change-password", element: <PasswordChanged />},
+
+
 ]);
 
 ReactDOM.createRoot(document.getElementById("root")).render(
