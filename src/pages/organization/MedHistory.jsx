@@ -12,6 +12,7 @@ import {
   TablePagination,
   Paper,
 } from "@mui/material";
+import { Link } from "react-router-dom";
 
 const createData = (illness, doctor, date) => {
   return { illness, doctor, date };
@@ -50,7 +51,9 @@ const MedHistory = () => {
     <div className="w-[100%] px-[200px] flex flex-col items-center justify-center">
       <button className="flex flex-row items-center justify-center absolute top-[60px] right-[60px] w-[170px] h-[52px] bg-[#DAF0FA] rounded-[8px]">
         <img src={plus} alt="plus sign" />
-        <p className="text-[16px] font-[700] pr-[10px]">Add new record</p>
+        <Link to="/recordcard">
+          <p className="text-[16px] font-[700] pr-[10px]">Add new record</p>
+        </Link>
       </button>
       <div className="relative w-[100%] flex flex-row items-center justify-center">
         <div className="flex flex-row items-baseline justify-start w-[100%] mt-[120px]">

@@ -1,10 +1,10 @@
 import "./App.css";
-import Login from "./pages/Login";
+import LandingPage from "./pages/LandingPage";
 
 function App() {
   return (
     <div className="flex flex-col items-center justify-center h-screen">
-      <Login />
+      <LandingPage />
     </div>
   );
 }

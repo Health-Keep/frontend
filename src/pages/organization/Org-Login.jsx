@@ -4,6 +4,7 @@ import { FaEyeSlash } from "react-icons/fa";
 import doc from "../../assets/doc.png";
 import logo from "../../assets/logo.png";
 import { Link, useNavigate } from "react-router-dom";
+import axios from "axios";
 
 const OrgLogin = () => {
   const [showPassword, setShowPassword] = useState(false);
@@ -23,7 +24,21 @@ const OrgLogin = () => {
 
   const onSubmit = async (event) => {
     event.preventDefault();
-    navigate("/dashboard");
+
+    try {
+      const response = await axios.post(
+        "https://backend-vsie.onrender.com/api/org/login",
+        {
+          email: email,
+          licence: license,
+          password: password,
+        }
+      );
+      console.log("Login Successful:", response.data);
+      navigate("/dashboard");
+    } catch (error) {
+      console.error("Signup failed:", error.message);
+    }
   };
 
   return (
