@@ -5,6 +5,7 @@ export default {
     extend: {
       backgroundImage: {
         loginBg: "url('/src/assets/welcomeBg.png')",
+        landBg: "url('/src/assets/home.png')",
       },
     },
   },

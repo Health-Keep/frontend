@@ -14,6 +14,8 @@ import ErrorPage from "./pages/ErrorPage.jsx";
 import DashBoard from "./pages/organization/DashBoard.jsx";
 import PatientSearchCard from "./pages/organization/PatientSearchCard.jsx";
 import MedHistory from "./pages/organization/MedHistory.jsx";
+import RequestAccess from "./pages/organization/RequestAccess.jsx";
+import MedicalRecordCard from "./pages/organization/MedicalRecordCard.jsx";
 
 const router = createBrowserRouter([
   { path: "/", element: <App />, errorElement: <ErrorPage /> },
@@ -27,6 +29,8 @@ const router = createBrowserRouter([
   { path: "/dashboard", element: <DashBoard /> },
   { path: "/searchcard", element: <PatientSearchCard /> },
   { path: "/medhistory", element: <MedHistory /> },
+  { path: "/requestaccess", element: <RequestAccess /> },
+  { path: "/recordcard", element: <MedicalRecordCard /> },
 ]);
 
 ReactDOM.createRoot(document.getElementById("root")).render(
