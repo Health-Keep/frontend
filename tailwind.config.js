@@ -5,10 +5,10 @@ export default {
     extend: {
       backgroundImage: {
         loginBg: "url('/src/assets/welcomeBg.png')",
-        'doctorBg': "url('/src/assets/doctor.png')",
-        'sickPatientBg': "url('/src/assets/sickPatient.png')",
-        'eyePatientBg': "url('/src/assets/eyePatient.png')",
-
+        landBg: "url('/src/assets/home.png')",
+        doctorBg: "url('/src/assets/doctor.png')",
+        sickPatientBg: "url('/src/assets/sickPatient.png')",
+        eyePatientBg: "url('/src/assets/eyePatient.png')",
       },
     },
   },

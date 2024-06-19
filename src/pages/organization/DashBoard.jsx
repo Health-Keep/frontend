@@ -21,6 +21,8 @@ const DashBoard = () => {
     setFilter(event.target.value);
   };
 
+  const [search, setSearch] = useState("");
+
   return (
     <div className="flex flex-row w-[100%]  min-h-screen">
       <div className="flex flex-col items-start justify-start px-[30px] w-[300px] min-h-screen bg-[#f5f5f5]">
@@ -81,6 +83,8 @@ const DashBoard = () => {
           id="search"
           placeholder="&#xF002; Search"
           style={{ fontFamily: "Arial, FontAwesome" }}
+          value={search}
+          onChange={(e) => setSearch(e.target.value)}
         />
 
         <div>
@@ -136,7 +140,7 @@ const DashBoard = () => {
         </div>
 
         <div className="w-[100%]">
-          <Table />
+          <Table search={search} />
         </div>
       </div>
     </div>

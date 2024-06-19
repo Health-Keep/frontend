@@ -6,16 +6,16 @@ import logo from "../../assets/logo.png";
 import { Link, useNavigate } from "react-router-dom";
 import PasswordStrengthMeter from "../../components/PasswordStrengthMeter";
 import { useAuth } from "../../context/AuthContext";
+import axios from "axios";
 
 const OrgSignup = () => {
   const { email, setEmail } = useAuth();
-  const navigate = useNavigate();
-
   const [name, setName] = useState("");
   const [license, setLicense] = useState("");
   const [password, setPassword] = useState("");
   const [showPassword, setShowPassword] = useState(false);
   const [errors, setErrors] = useState({});
+  const navigate = useNavigate();
 
   const handleTogglePassword = () => {
     setShowPassword(!showPassword);
@@ -39,7 +39,9 @@ const OrgSignup = () => {
     ) {
       validationError.email = "Please Input a valid Email";
     }
-    if (!license) validationError.license = "License is required";
+    if (license.length < 11 || license.length > 18)
+      validationError.license =
+        "Invalid License, it must be between 11 and 18 digits";
 
     if (!password.trim()) {
       validationError.password = "Password is required";
@@ -50,7 +52,22 @@ const OrgSignup = () => {
     setErrors(validationError);
 
     if (Object.keys(validationError).length === 0) {
-      navigate("/org-verify");
+      try {
+        const response = await axios.post(
+          "https://backend-vsie.onrender.com/api/org/signup",
+          {
+            name: name,
+            email: email,
+            password: password,
+            licence: license,
+          }
+          // response.data.user.name
+        );
+        console.log("Signup Successful:", response.data);
+        navigate("/org-verify");
+      } catch (error) {
+        console.error("Signup failed:", error.message);
+      }
     }
   };
 
